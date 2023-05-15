@@ -1,0 +1,4 @@
+steps:
+  # Build
+- name: 'gcr.io/faultyengineer/jenkinsdockerbuild'
+  args: ['docker build -t gcr.io/faultyengineer/jenkinsdockerbuild:$COMMIT_SHA -f Dockerfile']

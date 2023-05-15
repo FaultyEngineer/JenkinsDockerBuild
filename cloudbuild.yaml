@@ -1,4 +1,4 @@
 steps:
   # Build
-- name: 'gcr.io/faultyengineer/jenkinsdockerbuild'
-  args: ['docker build -t gcr.io/faultyengineer/jenkinsdockerbuild:$COMMIT_SHA -f Dockerfile']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io-docker.pkg.dev/perfect-atrium-386819/jenkinsdockerbuild/jenkinsdockerbuild:$COMMIT_SHA', '-f', 'Dockerfile', '.']
